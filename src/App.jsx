@@ -5,6 +5,7 @@ import About            from './pages/About'
 import Contact          from './pages/Contact'
 import NotFound         from './pages/NotFound'
 import Footer           from './components/Footer'
+import Login            from './pages/Login'
 
 export default function App() {
   return (
@@ -15,9 +16,11 @@ export default function App() {
         {/* layout que envuelve TODAS las páginas */}
 
           {/* página raíz: usa index en lugar de path='/' */}
+
           <Route index        element={<ForestLanding />} />
           <Route path="about"   element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="login" element={<Login />} />
           <Route path="*"       element={<NotFound />} />
    
       </Routes>

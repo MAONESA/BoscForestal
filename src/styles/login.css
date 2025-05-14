@@ -1,0 +1,94 @@
+:root{
+  --forest-dk:#0c2615;
+  --forest-md:#18633d;
+  --forest-lt:#f0faf4;
+}
+
+/* secció principal */
+.login{
+  min-height:80vh;
+  padding:6rem 1.5rem 8rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:var(--forest-dk);
+}
+
+/* títol */
+.login h1{
+  font-size:2.8rem;
+  font-weight:300;
+  margin-bottom:3rem;
+  letter-spacing:.02em;
+}
+
+/* formulari */
+.login__form{
+  width:100%;
+  max-width:400px;
+  display:grid;
+  gap:1.4rem;
+}
+
+.login__input{
+  padding:.9rem 1.1rem;
+  border:2px solid var(--forest-lt);
+  background:#fff;
+  font-size:1rem;
+  transition:border-color .25s;
+}
+.login__input:focus{
+  outline:none;border-color:var(--forest-md);
+}
+
+/* recorda'm + forgot */
+.login__row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:.9rem;
+  margin-top:-.5rem;
+}
+.login__remember{
+  display:flex;align-items:center;gap:.4rem;
+}
+.login__forgot{
+  text-decoration:none;
+  color:var(--forest-md);
+}
+.login__forgot:hover{ text-decoration:underline; }
+
+/* botó */
+.login__btn{
+  padding:.9rem 1.1rem;
+  background:var(--forest-md);
+  color:#fff;
+  border:none;
+  border-radius:9999px;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  cursor:pointer;
+  transition:background .25s;
+}
+.login__btn:hover{ background:var(--forest-dk); }
+
+/* toast */
+.login__toast{
+  position:fixed;
+  left:50%;bottom:2.5rem;transform:translateX(-50%);
+  background:var(--forest-md);
+  color:#fff;
+  padding:.85rem 1.4rem;
+  border-radius:9999px;
+  font-weight:500;
+  box-shadow:0 6px 18px rgb(0 0 0 / 15%);
+  pointer-events:none;z-index:2000;
+}
+
+/* responsive */
+@media(max-width:480px){
+  .login h1{font-size:2.2rem}
+}
