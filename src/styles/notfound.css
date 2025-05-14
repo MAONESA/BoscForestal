@@ -1,0 +1,46 @@
+/* paleta bosc ja declarada en global.css (vars) */
+
+.notfound{
+  min-height: 80vh;
+  padding: 6rem 1.5rem 4rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--green-900);
+}
+
+.notfound__emoji{
+  font-size: 6rem;           /* eriçó gran */
+  margin-bottom: 1rem;
+  filter: grayscale(1);      /* aspecte trist */
+}
+
+.notfound__title{
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: .3rem 0 1rem;
+}
+
+.notfound__text{
+  font-size: 1.05rem;
+  margin-bottom: 2.5rem;
+  opacity: .8;
+}
+
+/* boto verd estil bosc */
+.notfound__btn{
+  display: inline-block;
+  padding: .8rem 2rem;
+  background: var(--green-700);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: background .25s;
+}
+.notfound__btn:hover{
+  background: var(--green-900);
+}

@@ -1,0 +1,68 @@
+.about{
+  padding:6rem 0 3rem;
+  background:#f3faf6;
+  color:#0c2615;
+}
+.wrapper{
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+.about__title,
+.about__subtitle{
+  font-size:2.5rem;
+  margin-bottom:3rem;
+  letter-spacing:.05em;
+}
+
+/* --- equipo --- */
+.team{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:4rem 2rem;
+  margin-bottom:5rem;
+}
+.team__card{ text-align:center; }
+.team__photo{
+  width:180px;height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:1rem;
+}
+.team__name{ font-size:1.3rem; margin:0 0 .4rem; }
+.team__role{ font-size:.9rem; opacity:.8; margin:0; }
+
+/* --- contenido --- */
+.content-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:2rem;
+  margin-bottom:4rem;
+  align-items:center;
+}
+.content-row.reverse{ flex-direction:row-reverse; }
+.content-row__media{
+  flex:1 1 400px;
+  height:225px;
+  border:0;
+  border-radius:8px;
+}
+.content-row__text{
+  flex:1 1 320px;
+}
+.btn{
+  display:inline-block;
+  padding:.6rem 1.4rem;
+  border:1px solid #18633d;
+  color:#18633d;
+  border-radius:9999px;
+  text-decoration:none;
+  font-size:.9rem;
+  margin-top:1rem;
+}
+.btn:hover{ background:#18633d; color:#fff; }
+
+/* responsive */
+@media (min-width:768px){
+  .content-row__media{ height:320px; }
+}

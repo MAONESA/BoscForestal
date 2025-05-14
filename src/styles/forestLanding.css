@@ -1,0 +1,73 @@
+/* ---------- landing ---------- */
+
+.landing{
+  /* nav (64 px) + 1 rem de aire ARRIBA   */
+  padding-top:    calc(var(--nav-height) + 1rem);
+
+  /* ▼ EXACTAMENTE EL MISMO valor ABAJO   */
+  padding-bottom: calc(var(--nav-height) + 1rem);
+
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* centra verticalmente el carrusel dentro del viewport sobrante */
+  justify-content: center;
+}
+
+
+/* ---------- barra de sinónimos ---------- */
+.synonyms-bar{
+  margin: 0 0 2.5rem;           /* ③ ya no top-margin grande */
+  display:flex;gap:.75rem;flex-wrap:wrap;
+  font:600 .95rem/1.4 system-ui,sans-serif;
+  text-transform:uppercase;color:var(--green-700);
+  position:relative;z-index:1100;  /* sigue encima del fondo blur */
+}
+.synonyms-bar span{
+  position:relative;
+  padding:0 .75rem;
+}
+.synonyms-bar span+span::before{
+  content:'|';
+  position:absolute;
+  left:-.45rem;
+  color:currentColor;
+  opacity:.6;
+}
+
+/* ---------- carrusel ---------- */
+.carousel{
+  position:relative;
+  margin-top:-20px;          /* levanta el carrusel 20 px */
+  width:100%;
+  max-width:960px;           /* WAS 1000px: un pelín más estrecho */
+  aspect-ratio:16/9;
+  overflow:hidden;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgb(0 0 0 /.1);
+}
+.carousel-img{
+  width:100%;height:100%;object-fit:cover;
+}
+.carousel-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:rgba(255,255,255,.5);
+  border:none;padding:.5rem;cursor:pointer;
+  backdrop-filter:blur(6px);
+}
+.carousel-btn.prev{left:0;}
+.carousel-btn.next{right:0;}
+.carousel-btn:hover{background:rgba(255,255,255,.8);}
+.carousel-indicator{
+  margin-top:1.5rem;
+  letter-spacing:.2em;
+  font-family:'Times New Roman',serif;
+}
+
+/* ---------- icono árbol ---------- */
+.tree-anchor{
+  position:fixed;left:1rem;bottom:1rem;
+  color:var(--green-700);opacity:.7;transition:opacity .2s;
+}
+.tree-anchor:hover{opacity:1;}

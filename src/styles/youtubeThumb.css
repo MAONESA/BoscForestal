@@ -1,0 +1,25 @@
+.yt-thumb,
+.yt-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+/* --- botón/miniatura --- */
+.yt-thumb {
+  background-size: cover;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.yt-thumb__icon {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0 0 6px rgb(0 0 0 / 50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  pointer-events: none;
+}

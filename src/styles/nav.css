@@ -1,0 +1,65 @@
+/* nav.css – estilos exclusivos del navbar */
+
+:root {
+  --nav-height: 64px;
+}
+
+/* ---------- contenedor fijo ---------- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-height);
+
+  /* antes: background: rgba(255 255 255 / 0.92); */
+  background: #ffffff;            /* ← 100 % opaco */
+
+  backdrop-filter: none;          /* ya no necesitamos blur */
+  border-bottom: 1px solid rgb(0 0 0 / 6%);
+  box-shadow: 0 1px 4px rgb(0 0 0 / 8%);
+  z-index: 2000;
+}
+/* ---------- interior centrado ---------- */
+.nav__inner {
+  height: 100%;
+  max-width: 1280px;          /* mismo ancho que .wrapper */
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* logo --------------------------------------------------- */
+.nav__logo {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--green-700);
+  text-decoration: none;
+}
+
+/* links -------------------------------------------------- */
+.nav__links {
+  display: flex;
+  gap: 2rem;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--green-900);
+}
+.nav__link:hover {
+  color: var(--green-700);
+}
+
+/* -------- Burger placeholder (oculta links en móvil) ---- */
+@media (max-width: 768px) {
+  .nav__links {
+    display: none;
+  }
+}
